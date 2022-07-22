@@ -26,19 +26,13 @@ public class RandomNumberGenerator{
 
         int n;
         int pos0;
-        /**
-        int a = number.nextInt(22);
-        a = a + 7;
-**/
 
         for(int c = 0; c < 6; c++)
         {
           n = rand.nextInt(length);
           pos0 = n;
           password = password + array[pos0];
-
         }
-
 
       for( ; ; )
       {
@@ -77,5 +71,4 @@ public class RandomNumberGenerator{
       }
 
 }
-
 }

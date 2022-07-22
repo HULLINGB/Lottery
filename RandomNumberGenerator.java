@@ -17,8 +17,7 @@ public class RandomNumberGenerator{
       String password2 = "";
 
       int length = array.length;
-      int length2 = length - 1;
-
+		//start with length of 6 digits
       int power = 6;
       long counter = 0;
       String password = "";
@@ -39,7 +38,7 @@ public class RandomNumberGenerator{
         numberOfLoops = 1;
         for(int f = 0; f < power; f++)
         {
-          numberOfLoops = numberOfLoops * length2;
+          numberOfLoops = numberOfLoops * length;
         }
         for(long i = 0; i < numberOfLoops; i++)
         {

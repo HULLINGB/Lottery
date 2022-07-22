@@ -11,7 +11,6 @@ public class RandomNumberGenerator{
       String[] array = {"1" , "2" , "3" , "4" , "5" , "6", "7", "8",
                       "9", "0"};
 
-
       Random rand = new Random();
 
       String password2 = "";
@@ -68,6 +67,5 @@ public class RandomNumberGenerator{
           power++;
 
       }
-
 }
 }

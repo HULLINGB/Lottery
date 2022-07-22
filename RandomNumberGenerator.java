@@ -2,18 +2,14 @@ import java.util.Random;
 
 
 
-
-
-
-
-public class bruteforcestringbuilder8{
+public class RandomNumberGenerator{
 
 
   public static void main(String[] args)
   {
 
-      String[] array = {"a" , "b" , "c" , "d" , "e" , "f", "g", "h",
-                      "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"};
+      String[] array = {"1" , "2" , "3" , "4" , "5" , "6", "7", "8",
+                      "9", "0"};
 
 
       Random rand = new Random();
@@ -28,10 +24,6 @@ public class bruteforcestringbuilder8{
       String password = "";
       long numberOfLoops;
 
-
-
-
-
         int n;
         int pos0;
         /**
@@ -45,12 +37,7 @@ public class bruteforcestringbuilder8{
           pos0 = n;
           password = password + array[pos0];
 
-
         }
-
-
-
-
 
 
       for( ; ; )
@@ -73,10 +60,6 @@ public class bruteforcestringbuilder8{
           counter++;
           System.out.println(password + "  " + password2 + "  " + counter + "  " + numberOfLoops);
 
-
-
-
-
             if(password == password2)
             {
               for(long y = 0; y < numberOfLoops; y++)
@@ -91,16 +74,8 @@ public class bruteforcestringbuilder8{
           }
           power++;
 
-
-
-
-
-
       }
 
-
 }
-
-
 
 }

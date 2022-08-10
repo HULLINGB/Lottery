@@ -24,8 +24,7 @@ public class RandomNumberGenerator{
         for(int c = 0; c < 6; c++)
         {
           n = rand.nextInt(length);
-          pos0 = n;
-          password = password + array[pos0];
+          password = password + array[n];
         }
 
       for( ; ; )
@@ -47,7 +46,6 @@ public class RandomNumberGenerator{
 				{
 					n = rand.nextInt(length);
 					password2 = password2 + array[n];
-
 				}
 				counter++;
 				System.out.println("Winning number: " + password + "  " + password2 + "  " + counter);
@@ -59,13 +57,10 @@ public class RandomNumberGenerator{
 					System.out.println("The password has been found:" + password);
 				  }
 				}
-
 				password2 = "";
 				}
-
           }
           power++;
-
       }
 }
 }

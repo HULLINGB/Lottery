@@ -15,6 +15,7 @@ public class RandomNumberGenerator{
 		//start with length of 6 digits
       int power = 6;
       long counter = 0;
+	  long totalticketsPrintedAllTime = 0;
       String password = "";
       long numberOfLoops;
 
@@ -48,8 +49,9 @@ public class RandomNumberGenerator{
 					password2 = password2 + array[n];
 				}
 				counter++;
+				totalticketsPrintedAllTime++;
 				System.out.println("Winning number: " + password + "  " + password2 + "  " + counter);
-
+				//System.out.println(totalticketsPrintedAllTime);
 				if(password == password2)
 				{
 				  for(long y = 0; y < numberOfLoops; y++)
@@ -59,6 +61,8 @@ public class RandomNumberGenerator{
 				}
 				password2 = "";
 				}
+				//reset the counter for each sale
+				counter = 0;
           }
           power++;
       }

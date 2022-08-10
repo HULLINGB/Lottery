@@ -1,6 +1,6 @@
 import java.util.*;
 
-
+// this program interacts with a user
 public class RandomNumberGenerator{
 
   public static void main(String[] args)

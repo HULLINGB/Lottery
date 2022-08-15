@@ -26,18 +26,30 @@ public class Lottery{
       int lengthOfTicket = 6;
       long count = 0;
 	  long totalTicketsPrintedAllTime = 0;
+	  //Winning number
       String number1 = "";
+	  //Number generated for each ticket
 	  String number2 = "";
 	  int prize = 0;
       int n = 0;
       int pos0 = 0;
 
-      for(int c = 0; c < lengthOfTicket; c++)
-      {
-          n = rand.nextInt(length);
-          number1 = number1 + array[n];
-		  number1 = number1 + " ";
-      }
+	for( ; ; )
+	{
+		//We would normally run this on only one computer for the entire pool of players generating tickets
+		//The Lottery company would store this number on the centralized database, and reset it at each payout.
+		//We could choose to run a query to the centralized database every time we print a number,
+		//but as long as there is a record of the tickets that have been printed at each comp that will work.
+		//The customer can show the ticket and each store has a record of the tickets sold to verify the ticket's authenticity.
+		//Total tickets printed in the round of the game wouldn't reset each time a single computer restarts this algorithm.
+		totalTicketsPrintedAllTime = 0;
+		  System.out.println("Generating new winning number..");
+		  for(int c = 0; c < lengthOfTicket; c++)
+		  {
+			  n = rand.nextInt(length);
+			  number1 = number1 + array[n];
+			  number1 = number1 + " ";
+		  }
 
       for( ; ; )
       {
@@ -66,12 +78,20 @@ public class Lottery{
 			//System.out.println("Total prize is:  " + prize);
 			if(number1 == number2)
 			{
-				System.out.println("The password has been found:" + number1);
+				System.out.println("You have the winning number!!!");
+				System.out.println("Winning number: " + number1 + " Your number: " + number2);
+				break;
 			}
 			number2 = "";
 		}
 		//reset the count for each sale
 		count = 0;
+		if(number1 == number2)
+		{
+			System.out.println("Resetting the game...");
+		    break;
 		}
-	}
+	  }
+    }
+  }
 }

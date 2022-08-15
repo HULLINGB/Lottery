@@ -61,7 +61,8 @@ public class Lottery{
 			//System.out.println("Total number of tickets have been sold  " + totalTicketsPrintedAllTime);
 			//Total prize can be 90% of total ticket sales or something. 10% house fee, or pull a saved value from the database.
 			// double houseFee = .10;
-			//int prize = totalTicketsPrintedAllTime * (1 - houseFee);
+			//int sales = totalTicketsPrintedAllTime * 2;
+			//int prize = sales * (1 - houseFee);
 			//System.out.println("Total prize is:  " + prize);
 			if(number1 == number2)
 			{

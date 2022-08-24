@@ -48,6 +48,7 @@ public class Lottery{
 		  {
 			  n = rand.nextInt(length);
 			  number1 = number1 + array[n];
+			  //put a space in between each number
 			  number1 = number1 + " ";
 		  }
 
@@ -67,15 +68,25 @@ public class Lottery{
 				number2 = number2 + " ";
 			}
 			count++;
-			totalTicketsPrintedAllTime++;
-			System.out.println("Winning number: " + number1 + "  " + number2 + "  " + count);
+			//Update the total number of tickets that have ever been printed in the centralized database to keep track of sales and prize payout
+			//totalTicketsPrintedAllTime++;
+			System.out.print("Winning number: " + number1 + "  " + number2);
 			//Save value to centralized database and do a query statement here. Assign result to a totalTicketsPrintedAllTime
-			//System.out.println("Total number of tickets have been sold  " + totalTicketsPrintedAllTime);
+			//System.out.println("Total number of tickets have been sold:  " + totalTicketsPrintedAllTime);
 			//Total prize can be 90% of total ticket sales or something. 10% house fee, or pull a saved value from the database.
-			// double houseFee = .10;
+			//double houseFee = .10;
 			//int sales = totalTicketsPrintedAllTime * 2;
 			//int prize = sales * (1 - houseFee);
 			//System.out.println("Total prize is:  " + prize);
+			int length2 = 18 - number2.length();
+			if(number2.length() < 18)
+			{
+			    for(int t = 0; t < length2; t++)
+			    {
+			        System.out.print(" ");
+			    }
+			}
+			System.out.println(count);
 			if(number1 == number2)
 			{
 				System.out.println("You have the winning number!!!");

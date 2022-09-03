@@ -20,7 +20,7 @@ public class Lottery{
 					
 					
       Random rand = new Random();
-
+	  int maxLength = 18;
       int length = array.length;
 	//start with length of 6 digits
       int lengthOfTicket = 6;
@@ -78,7 +78,7 @@ public class Lottery{
 			//int sales = totalTicketsPrintedAllTime * 2;
 			//int prize = sales * (1 - houseFee);
 			//System.out.println("Total prize is:  " + prize);
-			int length2 = 18 - number2.length();
+			int length2 = maxLength - number2.length();
 			if(number2.length() < 18)
 			{
 			    for(int t = 0; t < length2; t++)

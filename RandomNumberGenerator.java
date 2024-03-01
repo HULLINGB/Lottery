@@ -64,8 +64,7 @@ public class RandomNumberGenerator{
 
 
           }
-          power++;
-
       }
+      
 }
 }

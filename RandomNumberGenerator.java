@@ -50,7 +50,7 @@ public class RandomNumberGenerator{
 
           }
           counter++;
-          System.out.println(password + "  " + password2 + "  " + counter + "  " + numberOfLoops);
+          System.out.println(password + "  " + password2 + "  " + counter + " combinations");
 
             if(password == password2)
             {

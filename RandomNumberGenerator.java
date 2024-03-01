@@ -5,6 +5,7 @@ import java.util.Random;
 public class RandomNumberGenerator{
 
 
+
   public static void main(String[] args)
   {
 
@@ -21,9 +22,9 @@ public class RandomNumberGenerator{
       long counter = 0;
       String password = "";
       long numberOfLoops;
-
         int n;
         int pos0;
+
         //Number of digits in the lottery number 12
         for(int c = 0; c < 12; c++)
         {
@@ -54,10 +55,9 @@ public class RandomNumberGenerator{
 
             if(password.equals(password2))
             {
-              for(long y = 0; y < numberOfLoops; y++)
-              {
                 System.out.println("The password has been found:" + password);
-              }
+                //End program if found
+                System.exit(0);
             }
 
             password2 = "";

@@ -17,15 +17,15 @@ public class RandomNumberGenerator{
 
       int length = array.length;
 		//start with length of 6 digits
-      int power = 6;
+      int power = 12;
       long counter = 0;
       String password = "";
       long numberOfLoops;
 
         int n;
         int pos0;
-
-        for(int c = 0; c < 6; c++)
+        //Number of digits in the lottery number 12
+        for(int c = 0; c < 12; c++)
         {
           n = rand.nextInt(length);
           pos0 = n;

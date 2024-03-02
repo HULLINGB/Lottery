@@ -14,7 +14,7 @@ public class RandomNumberGenerator{
 
       Random r = new Random();
       String w = "";
-      int l = array.length;
+      int l = a.length;
       int p = 12;
       long c = 0;
       String s = "";

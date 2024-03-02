@@ -21,7 +21,7 @@ public class RandomNumberGenerator{
         int n;
 
         //Number of digits in the lottery number 12
-        for(int c = 0; c < 12; c++)
+        for(int i = 0; i < 12; i++)
         {
           n = r.nextInt(l);
           w = w + a[n];

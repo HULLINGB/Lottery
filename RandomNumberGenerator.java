@@ -9,62 +9,41 @@ public class RandomNumberGenerator{
   public static void main(String[] args)
   {
 
-      String[] array = {"1" , "2" , "3" , "4" , "5" , "6", "7", "8",
+      String[] a = {"1" , "2" , "3" , "4" , "5" , "6", "7", "8",
                       "9", "0"};
 
-      Random rand = new Random();
-
-      String password2 = "";
-
-      int length = array.length;
-		//start with length of 6 digits
-      int power = 12;
-      long counter = 0;
-      String password = "";
-      long numberOfLoops;
+      Random r = new Random();
+      String w = "";
+      int l = array.length;
+      int p = 12;
+      long c = 0;
+      String s = "";
         int n;
-        int pos0;
 
         //Number of digits in the lottery number 12
         for(int c = 0; c < 12; c++)
         {
-          n = rand.nextInt(length);
-          pos0 = n;
-          password = password + array[pos0];
+          n = r.nextInt(l);
+          w = w + a[n];
         }
 
-      for( ; ; )
-      {
-        numberOfLoops = 1;
-        for(int f = 0; f < power; f++)
+        for( ; ; )
         {
-          numberOfLoops = numberOfLoops * length;
-        }
-        for(long i = 0; i < numberOfLoops; i++)
-        {
-
-          for(int z = 0; z < power; z++)
+          for(int z = 0; z < p; z++)
           {
-            n = rand.nextInt(length);
-
-            password2 = password2 + array[n];
-
+            n = r.nextInt(l);
+            s = s + a[n];
           }
-          counter++;
-          System.out.println(password + "  " + password2 + "  " + counter + " combinations");
+          c++;
+          System.out.println(w + "  " + s + "  " + c + " combinations");
 
-            if(password.equals(password2))
+            if(s.equals(w))
             {
-                System.out.println("The password has been found:" + password);
+                System.out.println("The password has been found:" + s);
                 //End program if found
                 System.exit(0);
             }
-
-            password2 = "";
-
-
-          }
-      }
-      
+            s = "";
+        }
 }
 }
